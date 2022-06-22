@@ -5,7 +5,7 @@ A (very) simple script for generating a csv with test users for moodle. Intended
 Example Usage:
 
 ```
-python generate-moodle-user-csv.py --username student --firstname Student --lastname Nr. --prefix student --email @example.com -n 20 -o moodle-student-list.csv
+python generate-moodle-user-csv.py --username student --firstname Student --lastname Nr. --password 123456 --prefix student --email @example.com -n 20 -o moodle-student-list.csv
 ```
 
 Documentation of the used arguments:
@@ -13,6 +13,7 @@ Documentation of the used arguments:
   -  `--firstname`: The firstname of the user
   -  `--lastname`: The lastname of the user
   -  `--prefix`: The prefix of the email address
+  -  `--password`: The password of the user
   -  `--email`: The email of the user
   -  `--number`: The number of users to generate
   -  `--output`: The output file

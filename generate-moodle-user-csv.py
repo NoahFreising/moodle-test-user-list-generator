@@ -17,7 +17,8 @@ if(__name__=='__main__'):
     parser.add_argument('-f', '--firstname', help='Firstname of the Moodle user', required=True)
     parser.add_argument('-l', '--lastname', help='Base lastname of the Moodle user', required=True)
     parser.add_argument('-e', '--email', help='Email domain of the Moodle user', required=True)
-    parser.add_argument('-p', '--prefix', help='Prefix of the Moodle user email', required=True)
+    parser.add_argument('-x', '--prefix', help='Prefix of the Moodle user email', required=True)
+    parser.add_argument('-p', '--password', help='Password of the Moodle user', required=True)
     parser.add_argument('-o', '--output', help='Output file', required=True)
     args = parser.parse_args()
 
@@ -37,9 +38,9 @@ if(__name__=='__main__'):
     # Generate csv file
     with open(args.output, 'w') as csvfile:
         writer = csv.writer(csvfile, delimiter=',')
-        writer.writerow(['username', 'firstname', 'lastname', 'email'])
+        writer.writerow(['username', 'firstname', 'lastname', 'email', 'password'])
         for i in range(int(args.number)):
-            writer.writerow([args.username + str(i), args.firstname, args.lastname + str(i), args.prefix + str(i) + args.email])
+            writer.writerow([args.username + str(i), args.firstname, args.lastname + str(i), args.prefix + str(i) + args.email, args.password])
 
     print('Generated csv file: ' + args.output)
     sys.exit(0)
