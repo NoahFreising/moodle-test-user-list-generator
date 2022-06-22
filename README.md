@@ -9,10 +9,10 @@ python generate-moodle-user-csv.py --username student --firstname Student --last
 ```
 
 Documentation of the used arguments:
-    --username: The username of the user
-    --firstname: The firstname of the user
-    --lastname: The lastname of the user
-    --prefix: The prefix of the email address
-    --email: The email of the user
-    --number: The number of users to generate
-    --output: The output file
+  -  `--username`: The username of the user
+  -  `--firstname`: The firstname of the user
+  -  `--lastname`: The lastname of the user
+  -  `--prefix`: The prefix of the email address
+  -  `--email`: The email of the user
+  -  `--number`: The number of users to generate
+  -  `--output`: The output file
